@@ -8,19 +8,23 @@ Example of write/read/delete from SQLite database.
 
 **Credits:** 
 
-Google and random posers on Stack Overflow
+Google, Microsoft and Stack Overflow
 
-**NOTE: Usupported example code.**
-
-**Example Scene Included**
+**Usage:**
 
 * See the "SQLRG_TEST" scene.
-* DBTestMe.sqlite
+* Database in the Streaming Assets folder: DBTestMe.sqlite
 * Add interface "ISqlRG" to your class.
 * Follow the "SqlRG_ExampleData.cs" on how to set up the class.
+* Add variables to your class by updating the "DBXref", "DBData" to handle the conversions.
 
- **Compatibility:** 
-  
+**NOTE:**
+
+* Useful as order of variables doesn't matter.
+* If the table does not exist it will be added. 
+* However, if adding additional variables to an existing database table, you will need to manually add them to the table using a DB editor.
+* Rather Good Recommends: https://sqlitebrowser.org/. 
+
 
 **Requirements**
 * Requires SQLite for Unity
