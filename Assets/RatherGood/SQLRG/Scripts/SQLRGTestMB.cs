@@ -39,7 +39,8 @@ namespace RatherGood.SQLRG
         [SerializeField] bool findRecordByID = false;
         void ReadSingleRecordByID()
         {
-            dataRead = dataBase.ReadData(idToFind);
+            dataRead.Clear();
+            dataRead.Add(dataBase.ReadData(idToFind));
         }
 
         [InspectorButton(nameof(ReadDB))]

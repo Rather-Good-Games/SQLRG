@@ -157,14 +157,14 @@ MonoBehaviour:
     dbPathDirectory: SQLRG
   writeDB: 0
   dataToWrite:
-    id: 42
-    iAmAString: Oh are you now!
-    iAmABool: 0
+    id: 4256
+    iAmAString: qwerty
+    iAmABool: 1
     iAmAnInteger: 42
     iAmAfloat: 42.42
     myTestEnum: 2
     iAmACustomStruct:
-      iAmAString: OK sure
+      iAmAString: qwerty2
       iAmABool: 0
       iAmAnInteger: 1234567890
   idToFind: 42
@@ -201,7 +201,17 @@ MonoBehaviour:
       iAmAString: OK sure
       iAmABool: 0
       iAmAnInteger: 1234567890
-  idToDelete: 43
+  - id: 425
+    iAmAString: qwerty
+    iAmABool: 1
+    iAmAnInteger: 42
+    iAmAfloat: 42.42
+    myTestEnum: 2
+    iAmACustomStruct:
+      iAmAString: qwerty2
+      iAmABool: 0
+      iAmAnInteger: 1234567890
+  idToDelete: 4256
   deleteRecordByID: 0
 --- !u!4 &523479719
 Transform:

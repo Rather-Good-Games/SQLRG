@@ -12,7 +12,7 @@ namespace RatherGood.SQLRG
     //
     /// <summary>
     /// Interface to read write a cass to/from a DB
-    /// Haxx, Interfaces cannot ahve static data therefor need to create static data for fields to return for classes that use this as noted.
+    /// Haxxors, Interfaces cannot have static data therefore need to create static data for fields to return for classes that use this as noted.
     /// See example
     /// </summary>
     public interface ISqlRG

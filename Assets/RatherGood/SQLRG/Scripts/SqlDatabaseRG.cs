@@ -22,7 +22,7 @@ namespace RatherGood.SQLRG
 
         public IDbConnection dbConnection;
 
-        //Keep a dummt copy to read static data? Cheating?
+        //Keep a dummy copy to read static data? Cheating?
         T dataDummy = new T();
 
 
@@ -107,28 +107,22 @@ namespace RatherGood.SQLRG
 
         }
 
-        public List<T> ReadData(string id)
+        public T ReadData(string id)
         {
             InitAndOpen();
 
             System.Data.IDataReader reader = GetAllTableData(id);
 
-            T readData;
-
-            List<T> retData = new List<T>();
+            T readData = new T();
 
             while (reader.Read())
             {
-                readData = new T();
-
                 readData.DBData = GetValuesFromRow(reader);
-
-                retData.Add(readData);
 
                 break; //THERE CAN BE ONLY ONE!
             }
 
-            return retData;
+            return readData;
 
         }
 
@@ -139,23 +133,23 @@ namespace RatherGood.SQLRG
             string key;
             object valueObj;
 
-            Dictionary<string, object> vtfDict = new Dictionary<string, object>();
+            Dictionary<string, object> newDict = new Dictionary<string, object>();
 
             for (int i = 0; i < fieldCount; i++)
             {
                 key = reader.GetName(i);
                 valueObj = reader.GetValue(i);
-                vtfDict.Add(key, valueObj);
+                newDict.Add(key, valueObj);
             }
 
-            return vtfDict;
+            return newDict;
 
         }
 
         public void DeleteData(string id)
         {
             InitAndOpen();
-            ExecuteCommand(GetDeleteRecordSqlCmd(id)); //Make tabe if doesn't exist   
+            ExecuteCommand(GetDeleteRecordSqlCmd(id)); //Make table if doesn't exist   
             CloseDB();
         }
 
